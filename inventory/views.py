@@ -1,7 +1,14 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
-
 def home(request):
-    return HttpResponse("<h1>Home</h1>")
+    context = {
+        "title": "Bucket v01",
+    }
+    return render(request, "home.html", context)
+
+def page1(request):
+    context = {
+        "title": "Bucket v01",
+    }
+    return render(request, "page1.html", context)
